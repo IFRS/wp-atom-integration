@@ -13,6 +13,10 @@ Text Domain: wp-atom-integration
 Domain Path: /lang
 */
 
+require_once('assets.php');
+
+require_once('shortcodes/atom-link.php');
+
 register_activation_hook(__FILE__, function () {
 
 });

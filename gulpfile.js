@@ -43,6 +43,11 @@ gulp.task('webpack', function(done) {
             path: path.resolve(__dirname, 'js'),
             filename: '[name].js'
         },
+        resolve: {
+            alias: {
+                'vue$': 'vue/dist/vue.esm.js'
+            }
+        }
     }, function(err, stats) {
         if (err) throw new gutil.PluginError('webpack', err);
         gutil.log('[webpack]', stats.toString({
